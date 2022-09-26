@@ -1,0 +1,23 @@
+[package]
+name = "r_playground_er"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.21.0", features = ["full"] }
+chrono = "0.4"
+chrono-tz = {version = "0.6.3", default-features = true}
+
+[dependencies.serenity]
+default-features = true
+features = ["collector"]
+version = "0.11.5"
+
+[dependencies.uuid]
+version = "1.1.2"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
