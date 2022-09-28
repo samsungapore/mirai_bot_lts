@@ -199,6 +199,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "date_component"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "079005a26c5e7b8ee7c9cd1c782288d8694508cfa22c7872ba3b296b2de0ef06"
+dependencies = [
+ "chrono",
+]
+
+[[package]]
 name = "digest"
 version = "0.10.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -734,6 +743,8 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "chrono-tz",
+ "date_component",
+ "rand",
  "serenity",
  "tokio",
  "uuid",

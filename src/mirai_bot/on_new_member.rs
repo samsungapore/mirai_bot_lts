@@ -20,7 +20,7 @@ pub async fn on_new_member(http: &Arc<Http>, system_channel: ChannelId, new_memb
     author.name(new_member.display_name());
 
     if !avatar_url.is_empty() {
-        author.icon_url(&avatar_url);
+        author.icon_url(avatar_url.clone());
     }
 
     MiraiLogger::debug(format!(
@@ -41,7 +41,7 @@ pub async fn on_new_member(http: &Arc<Http>, system_channel: ChannelId, new_memb
             embed.set_author(author);
 
             if !avatar_url.is_empty() {
-                embed.thumbnail(&avatar_url);
+                embed.thumbnail(avatar_url);
             }
 
             if let Some(joined_at) = new_member.joined_at {
